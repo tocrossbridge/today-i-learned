@@ -1,0 +1,1 @@
+Use position relative no pai, para que a criança absolute não fique perdida por aí :sparkles:
