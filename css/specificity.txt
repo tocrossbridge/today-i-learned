@@ -1,0 +1,4 @@
+Specificity
+
+1. O último escrito têm mais importância, mas uma classe é mais importante,
+e um ID é mais importante ainda e style in-line é ainda mais
