@@ -1,0 +1,61 @@
+Follow this steps:
+
+https://blog.logrocket.com/automatically-build-deploy-vuejs-app-github-pages/
+
+Being a very fast boy:
+
+1. Install vuejs 2
+(or clone this: https://github.com/viclotana/vue-canvas)
+
+2. npm install
+
+3. npm run serve
+
+4. Create this file on your root: vue.config.js
+    And put this inside:
+
+        module.exports = {
+            publicPath: '/your-project-name/'
+        }
+
+5. Create a folder in your root called: scripts
+
+6. Create a file inside this called: gh-pages-deploy.js
+
+    And fill the file with this:
+
+        /* eslint-disable no-console */
+        const execa = require("execa");
+        const fs = require("fs");
+        (async () => {
+        try {
+            await execa("git", ["checkout", "--orphan", "gh-pages"]);
+            // eslint-disable-next-line no-console
+            console.log("Building started...");
+            await execa("npm", ["run", "build"]);
+            // Understand if it's dist or build folder
+            const folderName = fs.existsSync("dist") ? "dist" : "build";
+            await execa("git", ["--work-tree", folderName, "add", "--all"]);
+            await execa("git", ["--work-tree", folderName, "commit", "-m", "gh-pages"]);
+            console.log("Pushing to gh-pages...");
+            await execa("git", ["push", "origin", "HEAD:gh-pages", "--force"]);
+            await execa("rm", ["-r", folderName]);
+            await execa("git", ["checkout", "-f", "master"]);
+            await execa("git", ["branch", "-D", "gh-pages"]);
+            console.log("Successfully deployed, check your settings");
+        } catch (e) {
+            // eslint-disable-next-line no-console
+            console.log(e.message);
+            process.exit(1);
+        }
+        })();
+
+7. Go to your package.json and at devDependencies add: "execa": "latest"
+
+8. And at scripts on your package.json add this: "deploy": "node scripts/gh-pages-deploy.js"
+
+9. npm install
+
+10. npm run deploy
+
+11. Push to github and its done!
