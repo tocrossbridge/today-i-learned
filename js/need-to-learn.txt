@@ -1,0 +1,7 @@
+5 concepts I have to know:
+
+1. Equality
+2. Async JS
+3. Error Handling
+4. ES6 Syntax
+5. Array Methods
