@@ -1,0 +1,13 @@
+I can use different ways to debug:
+
+console.dir => better to DOM elements
+
+console.table => format key-value of objects and arrays
+
+console.assert => check if something is something, just like 'undefined'
+
+console.time && console.timeEnd => to see how many time the program execute the code
+
+console.log('% red text here', 'color: red;') => yasss, it's red!!!
+
+console.log({ foo, bar })  => for objects
