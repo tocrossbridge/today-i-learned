@@ -1,0 +1,9 @@
+1. create class with the bg
+
+2. in the view that you want, crete a beforeCreated method just like these:
+
+export default {
+    beforeCreate: function(){
+        document.body.className = 'bg-class-here';
+    }
+}
