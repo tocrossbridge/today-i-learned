@@ -1,0 +1,49 @@
+1. Aprender typescript
+
+--------------------------------
+
+Criando um projeto react
+
+> React é uma biblioteca que não impõe arquitetura de estrutura de pastas e arquivos de configuração
+
+> A forma mais fácil de criar é usando o boilerplate: create-react-app
+
+    >> O que é boilerplate?
+        É uma template de código que pode ser utilizada na construção de aplicações com pouca ou nenhuma alteração
+
+> Outra opção seria o Vite ou Snowpack
+
+    >> O Vite foi criado pelo fundador do Vue <3
+
+
+-------------------------------------
+
+ssh-keygen -t rsa -C "email@gmail.com" -f "id_rsa_pessoal"
+
+ssh-keygen -t rsa -C "email@gmail.com" -f "id_rsa_trabalho"
+
+*se der erro de conexão/arquivo/whatever:
+    > start-ssh-agent
+
+cd ~/.ssh
+code config || touch config
+
+adiciona isso:
+
+
+# Conta pessoal como default
+Host github.com
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_pessoal
+   
+# Conta do trabalho
+Host github.com-trabalho  
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_trabalho
+
+
+e pra entrar:
+
+git clone git@github.com-trabalho:seu_user/repo_name.git
