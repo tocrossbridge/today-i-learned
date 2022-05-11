@@ -12,3 +12,11 @@ ou de uma forma mais elegante segundo a documentação mas q particularmente nã
 > for(var i = 0, item; item = a[i++])
 
 tipo, se declara 2 variáveis e na segunda parte, ele atribuí o novo valor e já verifica se é verdadeiro
+
+-------
+
+
+a[a.length] = item // é o mesmo que a.push(item)
+
+
+-----
