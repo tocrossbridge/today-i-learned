@@ -1,0 +1,9 @@
+String são objetos e strings têm métodos.
+
+Usando o método replace dá pra trocar palavras, tipo:
+
+> "hello, world".replace("hello", "goodbye")
+
+o que vai imprimir:
+
+> goodbye, world

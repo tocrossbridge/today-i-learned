@@ -1,0 +1,15 @@
+quando tiver fazendo for com vetor, usar isso aqui:
+
+> for(var i = 0; i < a.length; i++)
+
+é um tanto ineficiente pq tu tá procurando o length em cada iteração e o melhor jeito de escrever isso é:
+
+
+> for(var i = 0, len = a.length; i < len; i ++)
+
+ou de uma forma mais elegante segundo a documentação mas q particularmente não entendi lhufas:
+
+> for(var i = 0; ClipboardItem; item = a[i++])
+
+
+(se o doc diz que funciona então funciona kkkkkkkkk)
