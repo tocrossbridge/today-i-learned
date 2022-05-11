@@ -9,7 +9,6 @@ quando tiver fazendo for com vetor, usar isso aqui:
 
 ou de uma forma mais elegante segundo a documentação mas q particularmente não entendi lhufas:
 
-> for(var i = 0; ClipboardItem; item = a[i++])
+> for(var i = 0, item; item = a[i++])
 
-
-(se o doc diz que funciona então funciona kkkkkkkkk)
+tipo, se declara 2 variáveis e na segunda parte, ele atribuí o novo valor e já verifica se é verdadeiro
