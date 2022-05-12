@@ -46,13 +46,16 @@ class Produto{
         document.getElementById('valor').value = ''
     }
     deletar(id){
-        console.log('deletado!', id)
+        for(var i = 0, item; item = this.arrayProdutos[i++];){
+            if(item.id == id){
+                this.arrayProdutos.splice(i, 1)
+            }
+        }
     }
     mostrarProdutos(){
         const ul = document.getElementById('listaProdutos');
         const li = document.createElement('li');
 
-        
         for(var i = 0, item; item = this.arrayProdutos[i++];){
             let spanEdit = document.createElement('span');
             spanEdit.appendChild( document.createTextNode('Editar') );
