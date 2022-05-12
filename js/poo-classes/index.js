@@ -37,19 +37,33 @@ class Produto{
         }
         return true
     }
+    editar(){
+        console.log('editado!')
+    }
     cancelar(){
         document.getElementById('produto').value = ''
         document.getElementById('valor').value = ''
     }
-    deletar(){console.log('deletado!')}
-
+    deletar(){
+        console.log('deletado!')
+    }
     mostrarProdutos(){
         const ul = document.getElementById('listaProdutos');
-        const li = document.createElement('li')
+        const li = document.createElement('li');
+
+        const spanEdit = document.createElement('span');
+        spanEdit.appendChild( document.createTextNode('Editar') );
+        spanEdit.setAttribute('onclick', 'produto.editar()');
+
+        const spanDelete = document.createElement('span');
+        spanDelete.appendChild( document.createTextNode('Excluir') );
+        spanDelete.setAttribute('onclick', 'produto.deletar()');
 
         for(var i = 0, produto; produto = this.arrayProdutos[i++];){
-            let conteudo = `${produto.nome} - ${produto.valor}`
+            let conteudo = `${produto.nome} - ${produto.valor} - `
             li.textContent = conteudo
+            li.appendChild(spanEdit)
+            li.appendChild(spanDelete)
             ul.appendChild(li)
         }
     }
