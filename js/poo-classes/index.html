@@ -7,13 +7,35 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <li>Classe é um representação de algo</li>
-        <li>Método são as funções para manipular o sistema</li>
-    </ul>
+    <header>
+        <h1>Store</h1>
+    </header>
 
-    <button onclick="produto.adicionar">Adicionar</button>
-    <button onclick="produto.adicionar">Excluir</button>
+    <main>
+        <div>
+            <h2>Produtos</h2>
+            <span>Lista de produtos</span>
+        </div>
+
+        <div>
+            <input type="text" id="produto">
+            <input type="text" id="valor">
+        </div>
+    
+        <button onclick="produto.salvar()">Adicionar</button>
+        <button onclick="produto.cancelar()">Cancelar</button>
+
+        <h3>Seus produtos:</h3>
+        <ul id="listaProdutos"></ul>
+    </main>
+
+    <footer>
+        <ul>
+            <li>Classe é um representação de algo</li>
+            <li>Método são as funções para manipular o sistema</li>
+        </ul>
+    </footer>
+
     <script src="./index.js"></script>
 </body>
 </html>

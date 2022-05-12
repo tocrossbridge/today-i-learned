@@ -2,13 +2,57 @@ class Produto{
 
     // método construtor é o método que é chamado pela 1ª vez toda vez
     constructor(){
-        this.id = 0;
-        this.nome = '',
-        this.valor = 0;
+        this.id = 1;
+        this.arrayProdutos = [];
     }
+    salvar(){
+        let produto = this.lerDados();
+        if(this.validaCampos(produto)){
+            this.adicionarProduto(produto)
+            this.cancelar()
+        }
+        this.mostrarProdutos()
+    }
+    lerDados(){
+        let produto = {}
+        
+        produto.id = this.id;
+        produto.nome = document.getElementById('produto').value
+        produto.valor = document.getElementById('valor').value
 
-    adicionar(){console.log('adicionado!')}
+        return produto
+    }
+    adicionarProduto(produto){
+        this.arrayProdutos.push(produto)
+        this.id++
+    }
+    validaCampos(produto){
+        let msg = '';
+        if(produto.nome == '' || produto.valor == ''){
+            msg += 'Preencha todos os campos!'
+        }
+        if(msg != ''){
+            alert(msg)
+            return false
+        }
+        return true
+    }
+    cancelar(){
+        document.getElementById('produto').value = ''
+        document.getElementById('valor').value = ''
+    }
     deletar(){console.log('deletado!')}
+
+    mostrarProdutos(){
+        const ul = document.getElementById('listaProdutos');
+        const li = document.createElement('li')
+
+        for(var i = 0, produto; produto = this.arrayProdutos[i++];){
+            let conteudo = `${produto.nome} - ${produto.valor}`
+            li.textContent = conteudo
+            ul.appendChild(li)
+        }
+    }
 }
 
 // criando um obj e atribuindo na var:
