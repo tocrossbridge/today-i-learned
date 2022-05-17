@@ -1,0 +1,52 @@
+import React, { FC } from "react";
+
+type GreetingProps = {
+  name: string;
+}
+
+const Greeting:FC<GreetingProps> = ({ name }) => {
+  return <h1>Hello {name}</h1>
+};
+
+export default Greeting
+
+
+
+mas assim tu pode tipar direto, sem precisar do type ali, saca só:
+
+
+import React from 'react'
+
+const Greeting: React.FC<{text:string}> = ({text}) => {
+    return <h1>{text}</h1>
+}
+
+export default Greeting
+
+
+
+
+Na hora de usar, tu faz o import:
+
+import Greeting from '../components/..'
+
+e pra usar só chama :fire :fire :fire
+
+<Greeting name="coloca um valor aqui e 10/10" />
+
+
+
+Para fazer um texto optional caso ñ chegue nada, tu faz o paranaue assim:
+
+import React from 'react'
+
+const Greeting: React.FC<{text?:string}> = ({text = "hey its all fake happy"}) => {
+    return <h1>{text}</h1>
+}
+
+export default Greeting
+
+
+
+pra aprender a usar direito, le isso aqui:
+https://levelup.gitconnected.com/using-react-functional-components-with-hooks-in-typescript-6d61075edddc

@@ -1,0 +1,8 @@
+https://fettblog.eu/typescript-react-why-i-dont-use-react-fc/
+
+Em react temos dois jeitos de definir componentes
+
+1. Escrevendo uma classe e extendendo de um componente
+2. Escrevendo uma função e retornando um JSX
+
+Usando uma React.FC tu tipa a função não suas propriedades

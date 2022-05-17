@@ -1,0 +1,33 @@
+class NomeDaClasse {
+    
+    name: string;
+
+    constructor(){
+        this.name = "hello";
+    }
+}
+
+---------
+React.FC == React.FunctionComponent
+https://stackoverflow.com/questions/59988667/typescript-react-fcprops-confusion
+
+-----
+
+const Title: React.FunctionComponent<{ title: string }> = ({
+  children,
+  title
+}) => <div title={title}>{children}</div>;
+
+
+-----
+A TSX file is a TypeScript (. TS) file written using JSX syntax
+https://stackoverflow.com/questions/56871384/what-is-the-difference-between-ts-and-tsx-extensions-both-are-used-as-extensi
+
+> Use .ts for pure TypeScript files.
+> Use .tsx for files which contain JSX.
+> For example, a React component would be .tsx, but a file containing helper functions would be .ts
+
+--------------
+
+Posso usar o comando tsc para ver o erro no terminal,
+tipo, ele vai mostrar se o código tá tentando acessar propriedades e métodos que não existem
