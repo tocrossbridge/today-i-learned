@@ -1,0 +1,9 @@
+.emmet-css{
+    
+    p2r+w100+ma75+m0-auto
+
+    padding: 2rem;
+    width: 100px;
+    max-width: 75px;
+    margin: 0 auto;
+}
