@@ -1,0 +1,54 @@
+O que é um componente?
+
+Quando fazer um componente?
+
+Quais os benefícios?
+- escabilidade
+- manutenção
+- performance
+
+- Componentes independentes, substituíveis e modulares auxiliam no gerenciamento da complexidade e encorajam a reutilização
+
+Serviços
+- Serviços são responsáveis por organizar e compartilhar a  lógica de negócios
+- reutilizáveis entre diferentes componentes de uma aplicação
+- mandatórios para uma arquitetura modular e reutilizável
+
+Injeção de dependência
+- Todo Serviço é uma dependência que precisa ser instanciada dentro do componente para ser utilizada pelo mesmo.
+
+Ciclo de vida do componente
+- Todo componente possui seu ciclo de vida(normalmente chamado de lifecycle hooks)
+
+Padrão de desenvolvimento
+- Componentes inteligentes e apresentacionais
+
+-> Componente apresentacional:
+- parecido com funções puras
+- preocupam-se apenas com interface do usuário
+- não ficam responsáveis por recuperar dados ou lidar com lógica de negócios
+- não causam efeitos colaterais na aplicação
+- recebem dados via @input e emite eventos via @output
+
+-> Componente inteligente:
+- parecidas com funções impuras
+- contém toda a lógica de negócios
+- são internamente compostos por componentes apresentacionais
+- ficam responsáveis por repassar os dados para os componentes apresentacionais apresentarem ao usuário final
+
+Design modular
+- forma de dividir a aplicação em módulos para representar funcionalidades
+- Core Module: define serviços singleton, componentes de instância única, configuração e expotação de quaisquer módulos de terceiros necessários no módulo principal (app module)
+- Shared Module: contém componentes/pipes/diretivas comuns e também exporta módulos do Angular usados com frequência (CommonsModule)
+- Feature Module: organiza um conjunto de recursos da aplicação num módulo de funcionalidade
+
+SMACSS
+- arquitetura modular e escalável para CSS, dividida em 5 camadas:
+-> base: estilização de setores e pseudo-classes, além de resets
+-> layout: principais componentes como cabeçalho, rodapé, etc
+-> module: componentes reutilizáveis como botões e ícones
+-> state: todo elemento que será modificado ou terá alguma alteração no seu estado inicial
+-> theme: temas específicos para uma mesma aplicação
+
+OOCSS (css orientado a objeto)
+-> identifica um padrão visual que pode se repetir no projeto e o agrupa em classes tornando-o reutilizável
