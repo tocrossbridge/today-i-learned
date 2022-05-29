@@ -1,0 +1,11 @@
+ao invés de usar:
+
+header h1, h2 etc
+
+tu pode fazer:
+
+header :is(h1, h2, e tudo mais que tu quiser){
+    ta-daaaaaã!! :D
+}
+
+bem mais simples, não? ^-^
