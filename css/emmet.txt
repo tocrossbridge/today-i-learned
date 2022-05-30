@@ -2,6 +2,8 @@
     
     p2r+w100+ma75+m0-auto
 
+    é o mesmo que:
+
     padding: 2rem;
     width: 100px;
     max-width: 75px;
