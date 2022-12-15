@@ -1,0 +1,2 @@
+Em caso de "vue : O termo 'vue' não é reconhecido como nome de cmdlet", digite isso no cmd como administrador: 
+path=%path%;C:\Users\<USERNAME>\AppData\Roaming\npm
